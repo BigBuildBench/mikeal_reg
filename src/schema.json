@@ -1,0 +1,37 @@
+{
+  "types": {
+    "PackageV1": {
+      "kind": "struct",
+      "fields": {
+        "file": {
+          "type": {
+            "kind": "link",
+            "expectedType": "File"
+          }
+        },
+        "deps": {
+          "type": "PackageMap"
+        }
+      },
+      "representation": {
+        "map": {}
+      }
+    },
+    "PackageMap": {
+      "kind": "map",
+      "keyType": "String",
+      "valueType": {
+        "kind": "link",
+        "expectedType": "Package"
+      }
+    },
+    "Package": {
+      "kind": "union",
+      "representation": {
+        "keyed": {
+          "v1": "PackageV1"
+        }
+      }
+    }
+  }
+}

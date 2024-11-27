@@ -1,0 +1,22 @@
+{
+  "name": "reg",
+  "version": "0.0.0-dev",
+  "description": "",
+  "main": "index.js",
+  "browser": "browser.js",
+  "scripts": {
+    "build": "ipld-schema to-json Schema.md > src/schema.json",
+    "lint": "standard",
+    "test": "mocha test/*.spec.js"
+  },
+  "bin": {
+    "reg": "./cli.js"
+  },
+  "keywords": [],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (https://www.mikealrogers.com/)",
+  "license": "(Apache-2.0 AND MIT)",
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "standard": "^14.3.1"
+  }
+}
